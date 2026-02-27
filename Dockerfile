@@ -10,7 +10,7 @@ COPY app.js .
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 USER appuser
 
-EXPOSE 3001
+EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s \
   CMD wget -qO- http://localhost:3001/health || exit 1
 
